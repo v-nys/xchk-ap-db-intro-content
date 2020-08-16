@@ -6,4 +6,4 @@ from .contentviews import *
 
 course = Course('apdbintro',
                 'APDBIntro',
-                [(WhatIsMySQLView,[WhatIsDockerView])])
+                [(DemoMySQLView,[WhatIsDockerView])])
