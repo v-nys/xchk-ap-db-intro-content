@@ -1,0 +1,23 @@
+
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{# page title is inserted automatically inside h1 element #}
+{# header "Material" is included automatically (h2 element) #}
+{% block course_content %}
+{# sections should start with an h3 header #}
+{# if there is video material, place it before written material #}
+{# e.g. <h3>Video material</h3>...<h3>Written material</h3> #}
+{% endblock %}
+
+{# header "Assignment" is included automatically (h2 element) #}
+{% block assignment %}
+{# header "Description" is included automatically (h3 element) #}
+{# header "Technical requirements" is included automatically (h3 element) #}
+{# header "Check" is included automatically (h3 element) #}
+{% endblock %}
+
+{# block post_content is available but optional, should start with h2 #}
+{# can put references, acknowledgements in this block #}
+
+
