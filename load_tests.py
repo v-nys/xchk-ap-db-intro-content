@@ -6,7 +6,7 @@ from unittest import TestSuite
 from boot_django import boot_django
 
 boot_django()
-default_labels = ["xchk_ap_db_intro.tests", ]
+default_labels = ["xchk_ap_db_intro_content.tests", ]
 
 def get_suite(labels=default_labels):
     from django.test.runner import DiscoverRunner

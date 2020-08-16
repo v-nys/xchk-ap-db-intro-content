@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "xchk_ap_db_intro"
+name = "xchk_ap_db_intro_content"
 version = "0.0.1"
 description = "Course material related to APDBIntro for the xchk teaching framework"
 authors = ["Vincent Nys <vincentnys@gmail.com>"]

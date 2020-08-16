@@ -2,17 +2,17 @@
 from setuptools import setup
 
 packages = \
-['xchk_ap_db_intro']
+['xchk_ap_db_intro_content']
 
 package_data = \
 {'': ['*'],
- 'xchk_ap_db_intro': ['static/xchk_ap_db_intro/images/*', 'templates/xchk_ap_db_intro/*']}
+ 'xchk_ap_db_intro_content': ['static/xchk_ap_db_intro_content/images/*', 'templates/xchk_ap_db_intro_content/*']}
 
 install_requires = \
 []
 
 setup_kwargs = {
-    'name': 'xchk_ap_db_intro',
+    'name': 'xchk_ap_db_intro_content',
     'version': '0.0.1',
     'description': 'Course material related to APDBIntro for the xchk teaching framework',
     'long_description': None,

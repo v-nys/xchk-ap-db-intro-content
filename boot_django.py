@@ -6,7 +6,7 @@ import os
 import django
 from django.conf import settings
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "xchk_ap_db_intro"))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "xchk_ap_db_intro_content"))
 
 def boot_django():
     settings.configure(
