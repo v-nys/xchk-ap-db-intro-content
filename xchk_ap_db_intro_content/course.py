@@ -6,5 +6,4 @@ from .contentviews import *
 
 course = Course('apdbintro',
                 'APDBIntro',
-                [(DemoMySQLView,[WhatIsDockerView]),
-                 (WhatIsDockerView,[basecv.ImpossibleNodeView])])
+                [])
