@@ -78,10 +78,10 @@ class MysqlWorkbenchEnCliInstallerenView(ContentView):
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
-class WatIsEenDatabankDatabaseView(ContentView):
-    uid = 'xchk_ap_db_intro_content_wat_is_een_databank_database'
-    title = 'Wat is een databank (database)'
-    template = 'xchk_ap_db_intro_content/wat_is_een_databank_database.html'
+class WatIsEenDatabankView(ContentView):
+    uid = 'xchk_ap_db_intro_content_wat_is_een_databank'
+    title = 'Wat is een databank'
+    template = 'xchk_ap_db_intro_content/wat_is_een_databank.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
