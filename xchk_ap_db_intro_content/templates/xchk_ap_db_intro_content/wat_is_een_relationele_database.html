@@ -1,0 +1,25 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<ul>
+<li>jarenlang bijna synoniem van "database"</li>
+<li>dateert al van de jaren 70</li>
+<li>MySQL, Postgres, SQL Server,...</li>
+<li>uitgewerkt door Codd</li>
+<li>
+wiskundige fundering op basis van verzamelingen en verbanden tussen verzamelingen<ul>
+<li>verzamelingen = tabellen met info over specifieke zaken (bv. personen, producten,...)</li>
+<li>rijen met een identiteit (bv. rijksregisternummer,...)</li>
+<li>gelinkt door naar de identiteit te verwijzen</li>
+</ul>
+</li>
+<li>SQL (met dialecten per DB)</li>
+<li>"nadeel": <strong>schema</strong> moet vastgelegd worden</li>
+<li>ACID compliance</li>
+<li>niet meest schaalbaar (zou geen Facebook of Twitter kunnen dragen), maar nog altijd eerste keuze voor meeste apps</li>
+<li>niet handig als het niet mogelijk is een schema vast te leggen</li>
+</ul>
+
+{% endblock course_content %}

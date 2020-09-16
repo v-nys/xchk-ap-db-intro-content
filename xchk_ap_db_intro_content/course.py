@@ -1,9 +1,6 @@
+
 from xchk_core import contentviews as basecv
 from xchk_core.courses import Course
-from xchk_docker_content.contentviews import *
-from xchk_mysql_content.contentviews import *
 from .contentviews import *
 
-course = Course('apdbintro',
-                'APDBIntro',
-                [])
+course = Course('databanken intro','Databanken Intro',[(AlleAfsprakenView,[]),(BasisstructurenVanEenRelationeleDatabaseView,[WatIsEenRelationeleDatabaseView]),(CreateStatementView,[DiagramnotatieTabelView,DatabaseSelecterenView,SubtalenVanMySqlView,DatatypesSimpeleTekstView,DatatypesGeheleGetallenView]),(DatabaseSelecterenView,[WatIsMysqlView]),(DatatypesGeheleGetallenView,[WatIsMysqlView]),(DatatypesSimpeleTekstView,[WatIsMysqlView]),(DiagramnotatieTabelView,[DatatypesSimpeleTekstView,DatatypesGeheleGetallenView]),(InstallatieDockerView,[WatIsDockerView]),(InstallatieTeamviewerView,[]),(LokaleVsRemoteDatabaseView,[VerbindenMetDeDatabaseServerViaWorkbenchView]),(MysqlDockerImageView,[InstallatieDockerView]),(MysqlWorkbenchEnCliInstallerenView,[WatIsMysqlView]),(SubtalenVanMySqlView,[WatIsMysqlView]),(VerbindenMetDeDatabaseServerViaWorkbenchView,[MysqlWorkbenchEnCliInstallerenView]),(VerbindenMetEenLokaleDatabaseServerViaWorkbenchView,[VerbindenMetDeDatabaseServerViaWorkbenchView,MysqlDockerImageView]),(VoorbeeldVanEenRelationeleDatabaseView,[BasisstructurenVanEenRelationeleDatabaseView]),(VoordelenVanEenDatabaseView,[WatIsEenDatabankDatabaseView]),(WatIsDockerView,[]),(WatIsEenDatabankDatabaseView,[]),(WatIsEenRelationeleDatabaseView,[WatIsEenDatabankDatabaseView]),(WatIsMysqlView,[WatIsEenRelationeleDatabaseView]),(WelkeSoortenDatabasesBestaanErNogView,[WatIsEenRelationeleDatabaseView])])
