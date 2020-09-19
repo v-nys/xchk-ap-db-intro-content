@@ -21,6 +21,13 @@ class LokaleVsRemoteDatabaseView(ContentView):
     template = 'xchk_ap_db_intro_content/lokale_vs_remote_database.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
+class VoorbeeldinstructiesMySQLView(ContentView):
+    uid = 'xchk_ap_db_intro_content_voorbeeldinstructies_mysql'
+    title = 'Voorbeeldinstructies MySQL'
+    template = 'xchk_ap_db_intro_content/voorbeeldinstructies_mysql.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+
 
 class VoordelenVanEenDatabaseView(ContentView):
     uid = 'xchk_ap_db_intro_content_voordelen_van_een_database'

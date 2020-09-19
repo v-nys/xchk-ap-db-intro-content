@@ -1,0 +1,16 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Videomateriaal</h3>
+<h3>Schriftelijk materiaal</h3>
+<p>MySQL-instructies zijn vrij leesbaar in vergelijking met veel programmeertalen. Hieronder volgen enkele voorbeelden. Je hoeft deze nog niet zelf te kunnen gebruiken. Ze staan er alleen om je een idee te geven van hoe MySQL syntax er uitziet.</p>
+
+<p>Volgend stukje code voegt een nieuwe persoon, Zadie Smith, toe aan de tabel met personen: <code>INSERT INTO Personen(Voornaam,Familienaam,Geboortejaar) VALUES ('Zadie','Smith',1975);</code> Hier betekent <code>INSERT</code> dat er iets nieuws wordt toegevoegd.</p>
+
+<p>Volgend stukje code voegt een nieuwe tabel, Liedjes, toe aan de database. Elk liedje heeft een titel en een duurtijd. De titel is tekst met maximum 100 symbolen en de duurtijd is een geheel getal: <code>CREATE TABLE Liedjes(Titel VARCHAR(100), Duurtijd SMALLINT UNSIGNED);</code></p>
+
+{% endblock course_content %}
+{% block assignment %}
+Bij deze oefening hoort geen opdracht. Je moet gewoon op de knop klikken om aan te geven dat je alles gelezen hebt.
+{% endblock %}
