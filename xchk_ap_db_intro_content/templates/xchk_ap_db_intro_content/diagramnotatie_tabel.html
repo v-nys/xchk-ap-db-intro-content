@@ -2,6 +2,23 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
-<p>TODO: gebruik Workbench notatie en maak hiervan een afspraak</p>
+<h3>Schriftelijk materiaal</h3>
+<p>Om een beter overzicht van het databaseschema te krijgen, maken we vaak gebruik van een diagram. Dit wordt een <strong>entity-relationship diagram</strong> (of <strong>"ERD"</strong>) genoemd. Dit lijkt wat op de verzamelingennotatie die we eerder zagen, maar werkt op een ander niveau.</p>
+<p>Neem volgend voorbeeld:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/d29dfe4d44714b6fb0796a1647264598" %}" alt="favorite.png"></img></p>
+<p>Dit zegt volgende zaken:</p>
+<ul>
+<li><em>Exhalation</em> is het lievelingsboek van Vincent</li>
+<li><em>The Tempest</em> is het lievelingsboek van Michiel</li>
+<li><em>Never Let Me Go</em> is het lievelingsboek van Esther</li>
+</ul>
+<p>In het algemeen kunnen we dus stellen: <strong>personen hebben een lievelingsboek</strong>. Als we verder vastleggen dat personen altijd exact één lievelingsboek hebben, kunnen we dit grafisch uitdrukken als volgt:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/ed9579f20d984b96858cb1fc4249ee3b" %}" alt="eerste-ERD.png"></img></p>
+<p>Hier staat niets over Vincent, Esther of Michiel. Maar er staat dat er een relatietype is dat personen en boeken verbindt. De exacte betekenis van de getallen, de icoontjes en de stippellijn laten we voor iets later, maar onthoud alvast dat de rechthoeken de entiteiten voorstellen (met hun kolommen) en de ruiten relaties.</p>
+<p>Let op: er zijn veel stijlen van notatie voor het entity-relationship diagram. Wij hebben dit met MySQL Workbench getekend door eerst volgende knop te gebruiken:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/874bba06d2fc430bacdef8a8e283d188" %}" alt="Screenshot from 2020-09-18 17-13-06.png"></img></p>
+<p>Daarna hebben we de plusknop gebruikt en op "Add diagram" geklikt.</p>
+<p>Ten slotte hebben we via de menuknop "Model" gekozen voor "Object Notation" → "Workbench (Simplified)" en voor "Relationship Notation" → "Classic". Dit is ook de afspraak die we zullen hanteren voor de rest van de cursus.</p>
+<p>Als je een ERD tegenkomt op het internet, ga dan eerst na welke notatie gebruikt is. Anders kan je niet weten wat het ERD precies voorstelt.</p>
 
 {% endblock course_content %}

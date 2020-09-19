@@ -2,5 +2,17 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>Je vindt een Docker image voor MySQL terug op <a href="https://hub.docker.com/_/mysql">deze officiële pagina</a>.</p>
+<p>Je hoeft dit nog niet te begrijpen. Het volstaat dat je weet dat je op deze pagina moet zoeken als je ooit een MySQL in een container wil opzetten op een andere manier dan wij het in de les zullen doen.</p>
+<p>In de les gebruiken we namelijk het exacte commando: <code>docker run --name mijn-mysql-container -e MYSQL_ROOT_PASSWORD=mijn-mysql-container-wachtwoord -p 3306:3306 -d mysql:8.0.21</code></p>
+<p>Dit zorgt ervoor dat je een MySQL server uitvoert met:</p>
+<ul>
+<li>versie 8.0.21</li>
+<li>één gebruiker, namelijk <code>root</code></li>
+<li>wachtwoord voor <code>root</code>: <code>mijn-mysql-container-wachtwoord</code></li>
+<li>toegankelijk voor clients via poort 3306</li>
+</ul>
+<p>Als je deze container ooit stopt en hem later wil herstarten, dan kan je gewoon schrijven: <code>docker start mijn-mysql-container</code></p>
 
 {% endblock course_content %}

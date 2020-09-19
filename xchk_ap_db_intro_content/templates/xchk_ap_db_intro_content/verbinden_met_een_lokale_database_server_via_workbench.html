@@ -2,8 +2,14 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
-<ul>
-<li>mag hier zelf schema's maken, users aanmaken,...</li>
-</ul>
+<h3>Schriftelijk materiaal</h3>
+<p>Als je verbindt met je eigen MySQL, heb je alle rechten op de database. Je mag dus zo veel schema's aanmaken als je wil, verschillende users,...</p>
+<p>Om te verbinden met een MySQL-server in een Docker container zoals wij hem eerder geconfigureerd hebben, gebruik je de standaardinstellingen. Alleen het wachtwoord moet worden aangepast naar <code>mijn-mysql-container-wachtwoord</code>.</p>
+<p>Eerst maak je een nieuwe verbinding aan via de plusknop op het startscherm van Workbench:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/ba9f12f283b740d1b3a8cf0fb8d184c8" %}" alt="Screenshot from 2020-09-18 11-40-05.png"></img></p>
+<p>Vervolgens vul je volgende gegevens in. De meeste zouden al goed moeten staan en de naam van de verbinding mag je vrij kiezen:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/bbce4defe10948eb8ce20394e5d4829e" %}" alt="Screenshot from 2020-09-18 11-40-20.png"></img></p>
+<h3>Assignment</h3>
+<p>Hier hoort geen opdracht bij die je via xchk kan controleren. Vul je gegevens in en druk op "Test Connection". Als dat lukt, mag je in xchk gewoon op de knop "Controleren" klikken om de oefening te markeren als afgewerkt.</p>
 
 {% endblock course_content %}

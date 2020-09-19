@@ -2,5 +2,15 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>Eén instantie van een DBMS kan verantwoordelijk zijn voor meerdere databanken. Daarom is het belangrijk dat we uitdrukkelijk aangeven welke databank we precies willen gebruiken. Dit doen we in MySQL door het <code>USE</code> statement.</p>
+<p><code>USE</code> behoort tot de utility statements van MySQL. Het definieert geen structuur, dus het is geen element van de DDL. Het past geen data aan, dus het is geen element van de DML.</p>
+<p>Op de screenshot zie je dat de gebruiker verbonden is met een database server met meerdere schema's. De instructie <code>CREATE</code> hoeft je nog niet helemaal te begrijpen, maar je kan wel raden dat ze een tabel aanmaakt.</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/bbcd72dfc6004aed9a7bae52a04368bb" %}" alt="Screenshot from 2020-09-18 17-48-07.png"></img></p>
+<p>Na het uitvoeren van de instructie kan je onderstaande foutmelding krijgen.</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/19fdaabb821d436ba5ad998fa37e5320" %}" alt="Screenshot from 2020-09-18 17-50-31.png"></img></p>
+<p>"No database selected" betekent dat het niet duidelijk is of de tabel een onderdeel zal worden van de database <code>S0170681</code> of de database <code>sys</code>. Om de foutmelding op te lossen, moet je de database kiezen die de tabel met de naam na <code>FROM</code> bevat. Dit doe je met de instructie <code>USE S0170681</code>. Tot je er voor kiest een ander schema te gebruiken, gaan alle instructies dus uitvoeren met het schema <code>S0170681</code>. Dit kan verwarrend zijn, dus we spreken af dat we in al onze scripts <strong>altijd</strong> een geschikt <code>USE</code>-statement voorzien. Als je dit niet doet, rekent xchk je inzendingen fout.</p>
+<h3>Assignment</h3>
+<p>Hierbij hoort geen opdracht. Je moet wel nog op de knop om te controleren klikken om je oefening te markeren als afgewerkt.</p>
 
 {% endblock course_content %}

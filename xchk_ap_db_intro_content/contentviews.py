@@ -36,10 +36,10 @@ class SubtalenVanMySqlView(ContentView):
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
-class InstallatieTeamviewerView(ContentView):
-    uid = 'xchk_ap_db_intro_content_installatie_teamviewer'
-    title = 'installatie TeamViewer'
-    template = 'xchk_ap_db_intro_content/installatie_teamviewer.html'
+class SchermovernameView(ContentView):
+    uid = 'xchk_ap_db_intro_content_schermovername'
+    title = 'schermovername'
+    template = 'xchk_ap_db_intro_content/schermovername.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
@@ -50,20 +50,6 @@ class DiagramnotatieTabelView(ContentView):
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
-class AlleAfsprakenView(ContentView):
-    uid = 'xchk_ap_db_intro_content_alle_afspraken'
-    title = 'alle afspraken'
-    template = 'xchk_ap_db_intro_content/alle_afspraken.html'
-    strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
-
-
-class VoorbeeldVanEenRelationeleDatabaseView(ContentView):
-    uid = 'xchk_ap_db_intro_content_voorbeeld_van_een_relationele_database'
-    title = 'Voorbeeld van een relationele database'
-    template = 'xchk_ap_db_intro_content/voorbeeld_van_een_relationele_database.html'
-    strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
-
-
 class InstallatieDockerView(ContentView):
     uid = 'xchk_ap_db_intro_content_installatie_docker'
     title = 'installatie Docker'
@@ -71,10 +57,10 @@ class InstallatieDockerView(ContentView):
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
-class MysqlWorkbenchEnCliInstallerenView(ContentView):
-    uid = 'xchk_ap_db_intro_content_mysql_workbench_en_cli_installeren'
-    title = 'MySQL Workbench en CLI installeren'
-    template = 'xchk_ap_db_intro_content/mysql_workbench_en_cli_installeren.html'
+class MysqlWorkbenchInstallerenView(ContentView):
+    uid = 'xchk_ap_db_intro_content_mysql_workbench_installeren'
+    title = 'MySQL Workbench installeren'
+    template = 'xchk_ap_db_intro_content/mysql_workbench_installeren.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 
@@ -131,13 +117,6 @@ class WatIsMysqlView(ContentView):
     uid = 'xchk_ap_db_intro_content_wat_is_mysql'
     title = 'Wat is MySQL?'
     template = 'xchk_ap_db_intro_content/wat_is_mysql.html'
-    strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
-
-
-class WelkeSoortenDatabasesBestaanErNogView(ContentView):
-    uid = 'xchk_ap_db_intro_content_welke_soorten_databases_bestaan_er_nog'
-    title = 'Welke soorten databases bestaan er nog?'
-    template = 'xchk_ap_db_intro_content/welke_soorten_databases_bestaan_er_nog.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
 

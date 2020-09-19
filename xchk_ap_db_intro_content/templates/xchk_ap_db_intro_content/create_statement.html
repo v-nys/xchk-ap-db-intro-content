@@ -2,6 +2,20 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
-<p>TODO: in opdracht opbouwen naar project!</p>
+<h3>Schriftelijk materiaal</h3>
+<p>Elke relationele database heeft tabellen nodig. Anders kan je er geen gegevens in plaatsen. Daarom maken we eerst de nodige structuren aan. Dit doen we met het SQL <code>CREATE</code>-commando.</p>
+<p>Merk goed op: het <code>CREATE</code>-commando wijzigt iets aan de structuur van de databank. Daarom behoort het tot de Data Definition Language. Onthoud dat alle operaties om iets nieuws toe te voegen aan de <strong>structuur</strong> <code>CREATE</code>-operaties zijn. Operaties om iets nieuws toe te voegen dat geen deel uitmaakt van de structuur, gebruiken een ander woordje dan "CREATE".</p>
+<h4>Voorbeeld</h4>
+<p>We willen volgende gegevens in het systeem bijhouden:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/220b73705ab94a4084f13c7cecdd9035" %}" alt="favorite.png"></img></p>
+<p>Eerst hebben we een schema nodig, want we hebben er nog geen. Gebruik als schemanaam je <strong>eigen</strong> studentennummer. Met mijn oud studentennummer wordt dat dan <code>CREATE DATABASE S0170681;</code>.</p>
+<p>Eerst leggen we vast we welke tabellen en welke datatypes we nodig hebben:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/a60435f3b03b4c5e8b4cdf5a924b5ebf" %}" alt="eerste-ERD.png"></img></p>
+<p>Negeer de "1 more" onder "Geboortejaar". Negeer ook het gele sleuteltje. Die zaken komen later. Om de tabel "Personen" aan te maken, schrijven we:</p>
+<pre><code class="language-sql">CREATE TABLE Personen(Voornaam VARCHAR(50), Familienaam VARCHAR(50), Geboortejaar INT);
+</code></pre>
+<h3>Assignment</h3>
+<p>Geef zelf, aan de hand van de figuur van het ERD, de instructie om de tabel met boeken aan te maken (opnieuw: negeer het gele sleuteltje). Zet de juiste <code>CREATE</code>-instructie in het bestand dat gevraagd wordt in de technische vereisten.</p>
+<p>Let goed op: het is belangrijk dat je dezelfde kolomnamen gebruikt als op de figuur, <strong>inclusief gebruik van hoofdletters en kleine letters</strong>!</p>
 
 {% endblock course_content %}

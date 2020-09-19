@@ -2,11 +2,23 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>MySQL is opgedeeld in een aantal deeltalen. Elke deeltaal dient voor een bepaald soort gebruik. Het is nuttig (sommige van) deze deeltalen meteen te kunnen herkennen, want ze maken het makkelijker de syntax te onthouden.</p>
+<p>De volledige lijst deeltalen vind je terug in de (uitstekende) <a href="https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html">MySQL documentatie</a>. Hij ziet er zo uit:</p>
+<p><img src="{% static "xchk_ap_db_intro_content/images/1a78e75cfcfe449082370659a5902a26" %}" alt="Screenshot from 2020-09-17 08-31-27.png"></img></p>
+<p>Je hoeft deze niet uit het hoofd te leren, maar het is wel nuttig om vanaf het begin een onderscheid te maken tussen <strong>data definition statements</strong> en <strong>data manipulation statements</strong>.</p>
+<p>Data definition statements (ook de "Data Definition Language" of "DDL") dienen om vast te leggen hoe je gegevens er zullen uitzien. Met andere woorden, de structuur van de data. Ze bieden een antwoord op vragen zoals:</p>
 <ul>
-<li>DDL</li>
-<li>DML</li>
-<li>DQL (eigenlijk gewoon select)</li>
-<li>DCL</li>
+<li>Welke tabellen zijn er?</li>
+<li>Welk type gegevens mag ik in een bepaalde kolom bijhouden?</li>
+<li>Is het toegestaan bepaalde cellen leeg te laten?</li>
 </ul>
+<p>Data manipulation statements (of de "Data Manipulation Language" of "DML") dient om specifieke data te beheren en niet de structuur van de data. Voorbeelden hiervan zijn:</p>
+<ul>
+<li>Maak een nieuwe rij aan in de tabel <code>Personen</code>.</li>
+<li>Pas <code>Said</code> aan naar <code>Saïd</code>.</li>
+<li>Verwijder <code>Sanae</code> uit de tabel <code>Personen</code>.</li>
+</ul>
+<p>Als je jezelf steeds de vraag stelt of iets thuishoort in de DML of in de DDL, zal je veel makkelijker de juiste syntax terugvinden.</p>
 
 {% endblock course_content %}
