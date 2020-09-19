@@ -14,3 +14,9 @@
 <p>Waarom zo veel soorten? Kijk naar de kolom "gebruikt aantal bytes". Hoe meer getallen je wil kunnen voorstellen, hoe meer plaats je gebruikt. Databasetabellen bevatten vaak erg grote aantallen records, dus een verschil van een paar bytes kan al snel heel veel schelen in gebruikte opslagruimte.</p>
 
 {% endblock course_content %}
+
+{% block assignment %}
+{% autoescape off %}
+  {{ custom_data.rendered_mc_qs }}
+{% endautoescape %}
+{% endblock assignment %}

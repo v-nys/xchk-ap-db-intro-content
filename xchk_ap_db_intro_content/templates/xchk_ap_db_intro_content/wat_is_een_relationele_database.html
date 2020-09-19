@@ -34,3 +34,9 @@
 <p>Typisch voor relationele databases is dat je op voorhand moet vastleggen wat de structuur van je database is: welke tabellen er zijn en wat voor gegevens hier in mogen worden geplaatst. Deze structuur noemen we het "schema". Als je nieuwe gegevens wil bijhouden die niet passen binnen de structuur, moet je eerst de structuur aanpassen. Dit is niet bij alle soorten databanken zo. Andere types databanken hebben soms een heel losse structuur. Dit geeft hen soms meer flexibiliteit, maar zorgt er soms ook voor dat ze minder kunnen waken over de integriteit van hun gegevens.</p>
 
 {% endblock course_content %}
+
+{% block assignment %}
+{% autoescape off %}
+  {{ custom_data.rendered_mc_qs }}
+{% endautoescape %}
+{% endblock assignment %}

@@ -22,3 +22,9 @@
 <p>Als je een ERD tegenkomt op het internet, ga dan eerst na welke notatie gebruikt is. Anders kan je niet weten wat het ERD precies voorstelt.</p>
 
 {% endblock course_content %}
+
+{% block assignment %}
+{% autoescape off %}
+  {{ custom_data.rendered_mc_qs }}
+{% endautoescape %}
+{% endblock assignment %}

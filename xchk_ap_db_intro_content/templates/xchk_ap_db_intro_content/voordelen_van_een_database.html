@@ -18,3 +18,9 @@
 <p>Let op: er bestaan verschillende soorten databanken en deze hebben niet allemaal dezelfde voordelen in dezelfde mate. Maar in het algemeen kan je wel stellen dat dit voordelen zijn ten opzichte van een papieren administratie of een verzameling Office bestanden.</p>
 
 {% endblock course_content %}
+
+{% block assignment %}
+{% autoescape off %}
+  {{ custom_data.rendered_mc_qs }}
+{% endautoescape %}
+{% endblock assignment %}

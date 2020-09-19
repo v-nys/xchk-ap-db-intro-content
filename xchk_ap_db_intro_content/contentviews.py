@@ -13,6 +13,7 @@ class BasisstructurenVanEenRelationeleDatabaseView(ContentView):
     title = 'Basisstructuren van een relationele database'
     template = 'xchk_ap_db_intro_content/basisstructuren_van_een_relationele_database.html'
     strat = xchk_ap_db_intro_content_basisstructuren_van_een_relationele_database_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 class LokaleVsRemoteDatabaseView(ContentView):
     uid = 'xchk_ap_db_intro_content_lokale_vs_remote_database'
@@ -26,6 +27,7 @@ class VoordelenVanEenDatabaseView(ContentView):
     title = 'Voordelen van een database'
     template = 'xchk_ap_db_intro_content/voordelen_van_een_database.html'
     strat = xchk_ap_db_intro_content_voordelen_van_een_database_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 
 class SubtalenVanMySqlView(ContentView):
@@ -33,6 +35,7 @@ class SubtalenVanMySqlView(ContentView):
     title = 'subtalen van (My)SQL'
     template = 'xchk_ap_db_intro_content/subtalen_van_my_sql.html'
     strat = xchk_ap_db_intro_content_subtalen_van_my_sql_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 
 class SchermovernameView(ContentView):
@@ -47,6 +50,7 @@ class DiagramnotatieTabelView(ContentView):
     title = 'diagramnotatie tabel'
     template = 'xchk_ap_db_intro_content/diagramnotatie_tabel.html'
     strat = xchk_ap_db_intro_content_diagramnotatie_tabel_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 class InstallatieDockerView(ContentView):
     uid = 'xchk_ap_db_intro_content_installatie_docker'
@@ -94,6 +98,7 @@ class DatatypesGeheleGetallenView(ContentView):
     title = 'datatypes: gehele getallen'
     template = 'xchk_ap_db_intro_content/datatypes_gehele_getallen.html'
     strat = xchk_ap_db_intro_content_datatypes_gehele_getallen_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 class WatIsDockerView(ContentView):
     uid = 'xchk_ap_db_intro_content_wat_is_docker'
@@ -120,6 +125,7 @@ class WatIsEenRelationeleDatabaseView(ContentView):
     title = 'Wat is een relationele database?'
     template = 'xchk_ap_db_intro_content/wat_is_een_relationele_database.html'
     strat = xchk_ap_db_intro_content_wat_is_een_relationele_database_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 class DatabaseSelecterenView(ContentView):
     uid = 'xchk_ap_db_intro_content_database_selecteren'
