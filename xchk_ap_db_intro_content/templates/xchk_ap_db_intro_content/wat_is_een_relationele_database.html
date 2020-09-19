@@ -11,25 +11,33 @@
 <p><img src="{% static "xchk_ap_db_intro_content/images/44ca7a16ce90442697c2c6f7402e7823" %}" alt="authorship.png"></img></p>
 <p>Om dit in een elektronisch systeem voor te stellen, maken we geen tekeningen, maar gebruiken we tabellen. We doen dit zowel voor de "interessante gehelen" (dus de elementen van de verzamelingen) als voor de verbanden tussen elementen van deze verzamelingen.</p>
 <p>Voor de eerste tekening zou een tabelvoorstelling van de verzamelingen er zo kunnen uitzien:</p>
-<p>| Voornaam | Familienaam | Geboortejaar |
-|----------|-------------|--------------|
-| Vincent  | Nys         | 1987         |
-| Esther   | Nys         | 1990         |
-| Michiel  | Nys         | 1984         |
-| William  | Shakespeare | 1564         |
-| Ted      | Chiang      | 1967         |
-| Kazuo    | Ishiguro    | 1954         |</p>
-<p>| Titel               | Jaar van uitgave |
-|---------------------|------------------|
-| The Tempest         | 1623             |
-| Exhalation: Stories | 2019             |
-| Never Let Me Go     | 2005             |</p>
+
+<table>
+	<tr><th>Voornaam</th><th>Familienaam</th><th>Geboortejaar</th></tr>
+	<tr><td>Vincent</td><td>Nys        </td><td>1987</td></tr>
+	<tr><td>Esther </td><td>Nys        </td><td>1990</td></tr>
+	<tr><td>Michiel</td><td>Nys        </td><td>1984</td></tr>
+	<tr><td>William</td><td>Shakespeare</td><td>1564</td></tr>
+	<tr><td>Ted    </td><td>Chiang     </td><td>1967</td></tr>
+	<tr><td>Kazuo  </td><td>Ishiguro   </td><td>1954</td></tr>
+</table>
+
+<table>
+	<tr><th>Titel              </th><th>Jaar van uitgave</th></tr>
+	<tr><td>The Tempest        </td><td>1623            </td></tr>
+	<tr><td>Exhalation: Stories</td><td>2019            </td></tr>
+	<tr><td>Never Let Me Go    </td><td>2005            </td></tr>
+</table>
+
 <p>Ook het verband zou kunnen worden uitgedrukt met een tabel. Hoe dat precies werkt is voor iets verder, maar een vereenvoudiging die en goed beeld geeft is als volgt:</p>
-<p>| Lezer   | Titel               |
-|---------|---------------------|
-| Michiel | The Tempest         |
-| Vincent | Exhalation: Stories |
-| Esther  | Never Let Me Go     |</p>
+
+<table>
+	<tr><th>Lezer  </th><th>Titel              </th></tr>
+	<tr><td>Michiel</td><td>The Tempest        </td></tr>
+	<tr><td>Vincent</td><td>Exhalation: Stories</td></tr>
+	<tr><td>Esther </td><td>Never Let Me Go    </td></tr>
+</table>
+
 <p>Zowat alle DBMS'en voor relationele databases spreken (ongeveer) dezelfde taal: de "Structured Query Language" of SQL. Deze taal is ook gebaseerd op de relationele algebra's en ze maakt dat je vrij snel kan leren werken met één relationele database als je al met een andere relationele database overweg kan. Elk DBMS spreekt wel een eigen "dialect" van SQL, dus je kan niet verwachten dat code voor bijvoorbeeld PostgreSQL (een type relationele database) letterlijk kan worden uitgevoerd in SQLite (een ander type relationele database). Maar normaal moet je er niet veel aan aanpassen.</p>
 <p>Typisch voor relationele databases is dat je op voorhand moet vastleggen wat de structuur van je database is: welke tabellen er zijn en wat voor gegevens hier in mogen worden geplaatst. Deze structuur noemen we het "schema". Als je nieuwe gegevens wil bijhouden die niet passen binnen de structuur, moet je eerst de structuur aanpassen. Dit is niet bij alle soorten databanken zo. Andere types databanken hebben soms een heel losse structuur. Dit geeft hen soms meer flexibiliteit, maar zorgt er soms ook voor dat ze minder kunnen waken over de integriteit van hun gegevens.</p>
 
