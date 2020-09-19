@@ -14,8 +14,8 @@
 <p>Negeer de "1 more" onder "Geboortejaar". Negeer ook het gele sleuteltje. Die zaken komen later. Om de tabel "Personen" aan te maken, schrijven we:</p>
 <pre><code class="language-sql">CREATE TABLE Personen(Voornaam VARCHAR(50), Familienaam VARCHAR(50), Geboortejaar INT);
 </code></pre>
-<h3>Assignment</h3>
+{% endblock course_content %}
+{% block assignment %}
 <p>Geef zelf, aan de hand van de figuur van het ERD, de instructie om de tabel met boeken aan te maken (opnieuw: negeer het gele sleuteltje). Zet de juiste <code>CREATE</code>-instructie in het bestand dat gevraagd wordt in de technische vereisten.</p>
 <p>Let goed op: het is belangrijk dat je dezelfde kolomnamen gebruikt als op de figuur, <strong>inclusief gebruik van hoofdletters en kleine letters</strong>!</p>
-
-{% endblock course_content %}
+{% endblock %}

@@ -8,7 +8,8 @@ Gebruik <code>CHAR</code> voor stukken tekst van gelijke lengte (bijvoorbeeld se
 <p>Als je specifieke tekst wil voorstellen in een MySQL databank, zet je deze tussen enkele of dubbele aanhalingstekens. Je kan kiezen, maar als je tekst opent met één type aanhalingstekens, moet je hem sluiten met hetzelfde type aanhalingstekens. Bijvoorbeeld <code>'Do,Re,Mi,Fa,Sol,La,Si'</code> of <code>"Do,Re,Mi,Fa,Sol,La,Si"</code>.</p>
 <p>Als je data zelf aanhalingstekens bevat, kan je hem omgeven met het andere type. Bijvoorbeeld <code>"do's en don'ts"</code> (dubbele aanhalingstekens omdat we een enkel aanhalingsteken nodig hebben in de tekst zelf).</p>
 <p>Let op! Alles wat tussen aanhalingstekens staat is tekst. Zelfs cijfers. Met andere woorden: <code>'42'</code> is tekst en <code>42</code> is een getal. Met tekst kan je niet rekenen, met een getal wel. MySQL probeert wel te raden wat je bedoelt als je bijvoorbeeld <code>'42' + '1'</code> schrijft, maar niet elke taal doet dit. Daarom spreken we af dat je MySQL niet laat raden, maar altijd het juiste datatype gebruikt.</p>
-<h3>Assignment</h3>
-<p>Antwoord op volgende vraag door een bestand te maken met de gevraagde naam, op de eerste regel het antwoord op de eerste vraag te noteren en op de tweede regel het antwoord op de tweede vraag. Schrijf <strong>enkel</strong> het antwoord, zonder eigen toevoegingen zoals extra leestekens of commentaar, anders kan het systeem je oplossing niet ontcijferen.</p>
-
 {% endblock course_content %}
+
+{% block assignment %}
+<p>Antwoord op volgende vraag door een bestand te maken met de gevraagde naam, op de eerste regel het antwoord op de eerste vraag te noteren en op de tweede regel het antwoord op de tweede vraag. Schrijf <strong>enkel</strong> het antwoord, zonder eigen toevoegingen zoals extra leestekens of commentaar, anders kan het systeem je oplossing niet ontcijferen.</p>
+{% endblock assignment %}
