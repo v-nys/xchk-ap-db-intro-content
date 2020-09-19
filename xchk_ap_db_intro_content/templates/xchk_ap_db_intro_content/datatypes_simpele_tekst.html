@@ -3,6 +3,7 @@
 {% load static %}
 {% block course_content %}
 <h3>Schriftelijk materiaal</h3>
+<p>Met DDL-statements moeten we soms aangeven dat bepaalde data de vorm aanneemt van een hoeveelheid tekst. Bijvoorbeeld wanneer we een tabel met personen definiëren en deze personen een naam willen geven.</p>
 <p>Een kolom van type <code>CHAR</code> kan een stukje tekst bevatten. Dat stukje tekst heeft een vaste lengte. Je schrijft bijvoorbeeld <code>CHAR(50)</code> voor een stukje tekst van 50 karakters. Dan hebben alle waarden van dat type precies 50 tekens nodig aan opslagruimte. Als je niet op voorhand weet hoe veel lettertekens een gegeven waarde zal bevatten, gebruik je beter <code>VARCHAR</code>. Ook hier moet je een lengte voorzien, maar dit is een maximum. Zo is een kolom met type <code>VARCHAR(50)</code> beperkt tot maximum 50 karakters.
 Gebruik <code>CHAR</code> voor stukken tekst van gelijke lengte (bijvoorbeeld serienummers van producten). Gebruik <code>VARCHAR</code> voor zaken als namen.</p>
 <p>Als je specifieke tekst wil voorstellen in een MySQL databank, zet je deze tussen enkele of dubbele aanhalingstekens. Je kan kiezen, maar als je tekst opent met één type aanhalingstekens, moet je hem sluiten met hetzelfde type aanhalingstekens. Bijvoorbeeld <code>'Do,Re,Mi,Fa,Sol,La,Si'</code> of <code>"Do,Re,Mi,Fa,Sol,La,Si"</code>.</p>
