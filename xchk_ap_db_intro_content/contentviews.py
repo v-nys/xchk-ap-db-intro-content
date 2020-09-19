@@ -67,7 +67,7 @@ class WatIsEenDatabankView(ContentView):
     title = 'Wat is een databank'
     template = 'xchk_ap_db_intro_content/wat_is_een_databank.html'
     strat = xchk_ap_db_intro_content_wat_is_een_databank_strat
-
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
 
 class VerbindenMetEenLokaleDatabaseServerViaWorkbenchView(ContentView):
     uid = 'xchk_ap_db_intro_content_verbinden_met_een_lokale_database_server_via_workbench'
