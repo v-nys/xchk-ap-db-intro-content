@@ -65,7 +65,7 @@ basisstructuren_data = [('Wat voor iets is "Persoon"?',
                         ('Wat is, in de tekst, "William, Shakespeare, 1564"?',
                          ('Een tabel',False,'Een tabel kan meerdere stukken data bevatten. Dit is één stukje data dat één persoon voorstelt. De data over <em>alle</em> personen staat wel in een tabel.'),
                          ('Een record',True,None),
-                         ('Een veld',False,'Een veld stemt overeen met een kolom in een tabel. Dus "Voornaam" of "Geboortejaar" is een veld.')),(),(),(),()]
+                         ('Een veld',False,'Een veld stemt overeen met een kolom in een tabel. Dus "Voornaam" of "Geboortejaar" is een veld.'))]
 xchk_ap_db_intro_content_basisstructuren_van_een_relationele_database_strat = Strategy(
         refusing_check=Negation(ConjunctiveCheck([FileExistsCheck(),
                                                   MultipleChoiceFormatCheck(),
