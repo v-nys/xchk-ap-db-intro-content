@@ -6,7 +6,7 @@ import mysql.connector
 
 @receiver(pre_save)
 def create_shared_db_user(sender, instance, **kwargs):
-    from xchk_core import Repo
+    from xchk_core.models import Repo
     print("pre_save handler")
     if sender is Repo:
         print("repo gemaakt")
