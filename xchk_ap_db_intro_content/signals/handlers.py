@@ -1,10 +1,10 @@
 from django.conf import settings
 from django.utils.translation import ugettext_noop as _
-from django.db.models.signals import pre_save
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 import mysql.connector
 
-@receiver(pre_save)
+@receiver(post_save)
 def create_shared_db_user(sender, instance, **kwargs):
     from xchk_core.models import Repo
     print("pre_save handler")
