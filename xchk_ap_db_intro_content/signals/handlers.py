@@ -13,7 +13,7 @@ def create_shared_db_user(sender, instance, **kwargs):
         if instance.course == 'databankenintro':
             print("repo DBI gemaakt")
             print(f'user: {instance.user}')
-            mydb = mysql.connector.connect(host='studentmysql',user='root',password=settings.STUDENTMYSQL_ROOT_PASSWORD)
+            mydb = mysql.connector.connect(host='studentmysql',database='sys',user='root',password=settings.STUDENTMYSQL_ROOT_PASSWORD)
             mycursor = mydb.cursor()
             mycursor.execute(f'create database if not exists {instance.user.username};')
             mycursor.execute(f"create user if not exists {instance.user.username} identified by '{instance.user.initial_pw}';")
