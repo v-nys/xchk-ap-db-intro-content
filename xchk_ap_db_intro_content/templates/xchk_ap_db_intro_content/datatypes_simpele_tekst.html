@@ -2,6 +2,8 @@
 {% load xchk_instructions %}
 {% load static %}
 {% block course_content %}
+<h3>Videomateriaal</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iMVUZCQkXvc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h3>Schriftelijk materiaal</h3>
 <p>Met DDL-statements moeten we soms aangeven dat bepaalde data de vorm aanneemt van een hoeveelheid tekst. Bijvoorbeeld wanneer we een tabel met personen definiëren en deze personen een naam willen geven.</p>
 <p>Een kolom van type <code>CHAR</code> kan een stukje tekst bevatten. Dat stukje tekst heeft een vaste lengte. Je schrijft bijvoorbeeld <code>CHAR(50)</code> voor een stukje tekst van 50 karakters. Dan hebben alle waarden van dat type precies 50 tekens nodig aan opslagruimte. Als je niet op voorhand weet hoe veel lettertekens een gegeven waarde zal bevatten, gebruik je beter <code>VARCHAR</code>. Ook hier moet je een lengte voorzien, maar dit is een maximum. Zo is een kolom met type <code>VARCHAR(50)</code> beperkt tot maximum 50 karakters.
