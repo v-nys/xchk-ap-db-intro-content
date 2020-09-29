@@ -17,5 +17,5 @@ def create_shared_db_user(sender, instance, **kwargs):
             mycursor = mydb.cursor()
             mycursor.execute(f'create database if not exists {instance.user.username};')
             mycursor.execute(f"create user if not exists {instance.user.username} identified by '{instance.user.initial_pw}';")
-            mycursor.execute(f'grant all {instance.user.username} to {instance.user.username};')
+            mycursor.execute(f'grant all on {instance.user.username} to {instance.user.username};')
             mycursor.close()
