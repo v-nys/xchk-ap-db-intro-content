@@ -16,6 +16,6 @@ def create_shared_db_user(sender, instance, **kwargs):
             mydb = mysql.connector.connect(host='studentmysql',user='root',password=settings.STUDENTMYSQL_ROOT_PASSWORD)
             mycursor = mydb.cursor()
             mycursor.execute(f'create database if not exists {instance.user.username};')
-            mycursor.execute(f'create user if not exists {instance.user.username} identified by {instance.user.initial_pw};')
+            mycursor.execute(f"create user if not exists {instance.user.username} identified by '{instance.user.initial_pw}';")
             mycursor.execute(f'grant all {instance.user.username} to {instance.user.username};')
             mycursor.close()
