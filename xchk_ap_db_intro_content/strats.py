@@ -157,7 +157,7 @@ getallen_data = [
     ('TINYINT',False,'Met een <code>TINYINT</code> kan je hoeveelheden tussen -128 en 127 meter voorstellen. Negatieve waarden hebben geen zin in een recept en maximum 127 meter is erg weinig.'),
     ('TINYINT UNSIGNED',False,'Met een <code>TINYINT UNSIGNED</code> kan je hoeveelheden tussen 0 en 255 meter voorstellen. Je hebt negatieve waarden nodig en er zijn plaatsen veel hoger dan 255 m.'),
     ('SMALLINT',True,None),
-    ('SMALLINT UNSIGNED',True,'Met een <code>UNSIGNED</code> datatype kan je geen diepte onder de zeespiegel voorstellen.'),
+    ('SMALLINT UNSIGNED',False,'Met een <code>UNSIGNED</code> datatype kan je geen diepte onder de zeespiegel voorstellen.'),
     ('MEDIUMINT',False,'Met een <code>MEDIUMINT</code> kan je hoeveelheden tussen -8388608 en 8388607 meter voorstellen. Dit bereik lijkt wat te groot, waardoor je misschien bytes verspilt.'),
     ('MEDIUMINT UNSIGNED',False,'Met een <code>MEDIUMINT UNSIGNED</code> kan je hoeveelheden tussen 0 en 16777215 meter voorstellen. Je hebt negatieve waarden nodig Dat laatste getal is bijna 17000 kilometer. Het hoogste punt ter wereld ligt op ongeveer 9km en het diepste ligt op ongeveer -11km, waardoor je misschien bytes verspilt.'),
     ('INT',False,'Met een <code>INT</code> kan je hoeveelheden tussen -2147483648 en 2147483647 meter voorstellen. Dit bereik lijkt te groot, waardoor je bytes verspilt.'),
