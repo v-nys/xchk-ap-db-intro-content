@@ -99,6 +99,10 @@ xchk_ap_db_intro_content_create_statement_strat = Strategy(
         refusing_check=Negation(ConjunctiveCheck([FileExistsCheck(),xchk_ap_db_intro_content_create_statement_regex_check])),
         accepting_check=TrueCheck())
 
+xchk_ap_db_intro_content_drop_statement_strat = Strategy(
+        refusing_check=TrueCheck(),
+        accepting_check=Negation(TrueCheck()))
+
 diagramnotatie_data = [('Welke figuur levert informatie die we via de DML in het systeem zullen plaatsen?',
     ('De verzamelingennotatie',True,None),
     ('Het ERD',False,'Het ERD vertelt hoe onze tabellen er uitzien, maar tabellen aanmaken doen we met DDL-instructies')),

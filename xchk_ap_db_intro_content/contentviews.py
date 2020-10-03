@@ -27,8 +27,6 @@ class VoorbeeldinstructiesMySQLView(ContentView):
     template = 'xchk_ap_db_intro_content/voorbeeldinstructies_mysql.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
-
-
 class VoordelenVanEenDatabaseView(ContentView):
     uid = 'xchk_ap_db_intro_content_voordelen_van_een_database'
     title = 'Voordelen van een database'
@@ -92,6 +90,12 @@ class CreateStatementView(ContentView):
     title = 'CREATE statement'
     template = 'xchk_ap_db_intro_content/create_statement.html'
     strat = xchk_ap_db_intro_content_create_statement_strat
+
+class DropStatementView(ContentView):
+    uid = 'xchk_ap_db_intro_content_drop_statement'
+    title = 'DROP statement'
+    template = 'xchk_ap_db_intro_content/drop_statement.html'
+    strat = xchk_ap_db_intro_content_drop_statement_strat
 
 class MysqlDockerImageView(ContentView):
     uid = 'xchk_ap_db_intro_content_mysql_docker_image'
