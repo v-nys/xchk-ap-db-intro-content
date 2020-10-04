@@ -197,107 +197,30 @@ xchk_ap_db_intro_content_datatypes_booleans_strat = Strategy(
 
 test_data = [("Wat gebeurt er als je volgend SQL-statement uitvoert? <code>CREATE DATABASE IF EXISTS APDB;</code>",
                ("Er wordt een database met naam APDB aangemaakt",False,"Hoe kan er een database met deze naam aangemaakt worden als ze al bestaat?"),
-               ("Je krijgt een foutmelding",True,"Het is logisch om een database te maken als deze <em>niet</em> bestaat. Het is niet logisch deze te maken als ze al bestaat."))]
-#                ("DATETIME",False,None)),
-#              ('Welk datatype zou je gebruiken om "15u43" voor te stellen?',
-#                ("TIME",True,None),
-#                ("DATE",False,None),
-#                ("DATETIME",False,None))]
-# 
-#  Als je het sql-statement “CREATE DATABASE IF EXISTS ApDb;“ zou uitvoeren, wat is dan de uitkomst?
-# 
-#     Databank wordt aangemaakt
-#     Error wordt weergegeven
-# 
-#  
-# 
-# Welk resultaat krijg je met volgend sql-statement?
-# 
-# USE ApDb;
-# 
-# CREATE TABLE Boeken (Titel VARCHAR(50), Uitgeverij VARCHAR(50));
-# 
-#     De tabel boeken wordt aangemaakt binnen de database ApDb met twee kolommen, nl. titel en uitgeverij.
-#     De tabel boeken wordt aangemaakt met twee kolommen als die samen niet meer dan 100 VARCHAR’s innemen.
-#     De tabel boeken wordt aangemaakt met mogelijks twee kolommen, gelet op het datatype VARCHAR.
-# 
-#  
-# 
-# Welk resultaat krijg je met volgend sql-statement?
-# 
-# DROP DATABASE Boeken;
-# 
-#     De databank boeken wordt verwijderd
-#     De tabel boeken wordt verwijderd
-#     Er wordt een error weergegeven
-# 
-#  
-# 
-# Waarom zou je eerder VARCHAR gebruiken dan CHAR als datatype?
-# 
-#     Je weet niet exact op voorhand hoveel tekens een waarde zal bevatten
-#     Bij VARCHAR moet je geen maximum opgeven
-# 
-#  
-# 
-# Welk resultaat krijg je met volgend sql-statement als je weet dat je twee kolommen hebt, nl. titel en uitgeverij?
-# 
-# USE ApDb;
-# 
-# INSERT INTO Boeken (Titel)
-# 
-# VALUES ('Standaard Sql Basisboek');
-# 
-#     Als niet bepaald is dat uitgevrij leeg mag zijn, wordt een boek met de opgegeven titel toegevoegd
-#     Dit lukt niet omdat er geen uitgeverij is opgegeven
-# 
-#  
-# 
-# Kunnen we met een INSERT-statement in één keer meerdere rijen toevoegen, m.a.w. kan je bij VALUES meer dan één rij toevoegen?
-# 
-#     Ja, dat kan door deze op een nieuwe lijn te plaatsen
-#     Nee, dit kan niet
-#     Ja, dat kan door deze te scheiden met komma’s
-# 
-#  
-# 
-# Welk resultaat krijg je met volgend sql-statement?
-# 
-# USE ApDb;
-# 
-# SELECT Titel Uitgeverij FROM Boeken;
-# 
-#     Je krijgt een error
-#     Je krijgt alle titels en uitgeverijen te zien die aanwezig zijn in de tabel boeken
-#     Je krijgt enkel de titel te zien
-# 
-#  
-# 
-# Als je de namen van de kolommen niet uit het hoofd kent, wat kan je dan doen om het je gemakkelijk te maken?
-# 
-#     Je begint een mogelijke kolomnaam te typen en drukt op de tab-toets om aan te vullen
-#     Je typt eerst de naam van de tabel, gevolgd door een punt, waarbij je een selectie van kolommen te zien krijgt
-#     Je typt de naam van de tabel en direct daarna druk je enter waardoor je een lijstje krijgt waaruit je kan kiezen
-# 
-#  
-# 
-# Moet de kolomnaam die je gebruikt na ORDER BY ook zijn opgenomen in de kolomnamen die je de SELECT-instructie hebt getypt?
-# 
-#     Ja
-#     Nee
-# 
-#  
-# 
-# Als je met volgend sql-statement uitvoert, welke kolommen worden dan weergegeven als je weet dat de tabel boeken uit titel en uitgeverij bestaat?
-# 
-# USE ApDb;
-# 
-# SELECT * FROM Boeken;
-# 
-#     Je krijgt enkel de titel-kolom te zien omdat deze als eerste aanwezig is binnen de tabel boeken.
-#     Je krijgt enkel de titel-kolom te zien omdat deze als enige een waarde heeft
-#     Je krijgt beide kolommen te zien
-# 
+               ("Je krijgt een foutmelding",True,"Het is logisch om een database te maken als deze <em>niet</em> bestaat. Het is niet logisch deze te maken als ze al bestaat.")),
+             ("Welk resultaat krijg je van het SQL-statement <code>CREATE TABLE Boeken (Titel VARCHAR(50), Uitgeverij VARCHAR(50));</code>?",
+                 ("De tabel <code>Boeken</code> wordt aangemaakt binnen de gebruikte database met twee kolommen, nl. Titel en Uitgeverij. Deze kunnen elk maximum 50 karakters bevatten.",True,"Misschien moet je de betekenis van VARCHAR en CHAR nog eens opzoeken."),
+                 ("De tabel <code>Boeken</code> wordt aangemaakt binnen de gebruikte database met twee kolommen, nl. Titel en Uitgeverij. Deze kunnen elk exact 50 karakters bevatten.",False,"Misschien moet je de betekenis van VARCHAR en CHAR nog eens opzoeken.")),
+             ("Waarom zou je ergens VARCHAR gebruiken eerder dan CHAR?",
+                 ("Bij VARCHAR weet je niet exact op voorhand hoe veel tekens een waarde zal bevatten",True,"Misschien moet je de betekenis van VARCHAR en CHAR nog eens opzoeken."),
+                 ("Bij VARCHAR hoef je geen maximum aantal tekens op te geven",False,"Kijk naar de voorbeelden over VARCHAR. Wat betekent het getal tussen de haakjes in die voorbeelden?")),
+             ("Wat gebeurt er als je weet dat je twee <code>NOT NULL</code>-kolommen hebt (<code>Titel</code> en <code>Uitgeverij</code>) en het volgende uitvoert? <code>INSERT INTO Boeken(Titel) VALUES ('Standaard SQL basisboek');</code>",
+                 ("Het boek met de opgegeven titel wordt toegevoegd",False,"Waarvoor staat NOT NULL?"),
+                 ("Je krijgt een foutmelding",True,"Uitgeverij is NOT NULL...")),
+             ("Kunnen we met een INSERT-statement in één keer meerdere rijen toevoegen, m.a.w. kan je bij VALUES meer dan één rij toevoegen?",
+                 ("Ja, dat kan door deze op een nieuwe lijn te plaatsen",False,"Het gaat, maar controleer de voorbeelden van de syntax."),
+                 ("Nee",False,"Lees de pagina over dit onderwerp opnieuw."),
+                 ("Ja, dat kan door deze te scheiden met komma's",True,None)),
+             ("Tot welke familie statements behoort INSERT?",
+                     ('DDL',False,'Je doet geen structurele wijziging. Dan is het niet logisch de DDL te gebruiken. Je past <em>de data zelf</em> aan, niet hun structuur.'),
+                  ('DML',True,'Je doet geen structurele wijziging. Dan is het niet logisch de DDL te gebruiken. Je past <em>de data zelf</em> aan, niet hun structuur.')),
+             ("Als je de namen van de kolommen niet uit het hoofd kent, wat kan je dan doen om het je gemakkelijk te maken?",
+                 ("Je begint een mogelijke kolomnaam te typen en drukt op de tab-toets om aan te vullen",False,"TAB wordt in veel omgevingen gebruikt voor automatisch aanvullen, maar in MySQL Workbench is het anders."),
+                 ("Je typt eerst de naam van de tabel, gevolgd door een punt, waarbij je een selectie van kolommen te zien krijgt",True,None),
+                 ("Je typt de naam van de tabel en direct daarna druk je enter waardoor je een lijstje krijgt waaruit je kan kiezen",False,"ENTER duwen zal je gewoon naar de volgende regel sturen.")),
+             ("Moet de kolomnaam die je gebruikt na ORDER BY ook zijn opgenomen in de kolomnamen die je de SELECT-instructie hebt getypt?",
+                 ("Ja",False,"Probeer het eens uit in een eigen tabel..."),
+                 ("Nee",True,None))]
 xchk_ap_db_intro_content_self_test_theory_strat = Strategy(
         refusing_check=Negation(ConjunctiveCheck([FileExistsCheck(),
                                                   MultipleChoiceFormatCheck(),
