@@ -6,7 +6,6 @@ from .contentviews import *
 course = Course('databankenintro','Databanken Intro',[(ZelftestTheorieEenView,[DatatypesTemporeleTypesView,
                                                                                IfNotExistsView,
                                                                                DropStatementView,
-                                                                               InsertStatementView,
                                                                                SelectStatementView,
                                                                                MysqlWorkbenchInstallerenView]),
                                                       (NotNullView,[CreateStatementView]),
