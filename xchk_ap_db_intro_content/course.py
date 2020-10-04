@@ -11,7 +11,7 @@ course = Course('databankenintro','Databanken Intro',[(ZelftestTheorieEenView,[D
                                                       (NotNullView,[CreateStatementView]),
                                                       (InsertStatementView,[NotNullView]),
                                                       (SelectStatementView,[InsertStatementView]),
-                                                      (IfNotExistsView,[DatatypesBooleansView]),
+                                                      (IfNotExistsView,[CreateStatementView]),
                                                       (DatatypesTemporeleTypesView,[CreateStatementView]),
                                                       (DatatypesBooleansView,[CreateStatementView]),
                                                       (BasisstructurenVanEenRelationeleDatabaseView,[WatIsEenRelationeleDatabaseView]),

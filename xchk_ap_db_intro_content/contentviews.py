@@ -174,7 +174,7 @@ class SelectStatementView(ContentView):
 
 class NotNullView(ContentView):
     uid = 'xchk_ap_db_intro_content_not_null'
-    title = 'not NULL'
+    title = 'NOT NULL'
     template = 'xchk_ap_db_intro_content/not_null.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
