@@ -4,7 +4,7 @@ from xchk_core.models import Repo
 import mysql.connector
 
 # Create your views here.
-def create_dbs_view():
+def create_dbs_view(request):
     for db_repo in Repo.objects.filter(course='databankenintro'):
         uname = db_repo.user.username
         upw = db_repo.user.initial_pw
