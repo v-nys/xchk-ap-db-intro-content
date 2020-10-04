@@ -156,27 +156,31 @@ class DatabaseSelecterenView(ContentView):
     template = 'xchk_ap_db_intro_content/database_selecteren.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
-# TODO
-class IfExistsView(ContentView):
-    uid = 'xchk_ap_db_intro_content_if_exists'
-    title = 'if (not) exists'
-    template = 'xchk_ap_db_intro_content/if_exists.html'
+class IfNotExistsView(ContentView):
+    uid = 'xchk_ap_db_intro_content_if_not_exists'
+    title = 'if not exists'
+    template = 'xchk_ap_db_intro_content/if_not_exists.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
-# TODO
 class InsertStatementView(ContentView):
     uid = 'xchk_ap_db_intro_content_insert_statement'
     title = 'INSERT statement'
     template = 'xchk_ap_db_intro_content/insert_statement.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
-# TODO
 class SelectStatementView(ContentView):
     uid = 'xchk_ap_db_intro_content_select_statement'
     title = 'SELECT statement'
     template = 'xchk_ap_db_intro_content/select_statement.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
+class NotNullView(ContentView):
+    uid = 'xchk_ap_db_intro_content_not_null'
+    title = 'not NULL'
+    template = 'xchk_ap_db_intro_content/not_null.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+# TODO
 class ZelftestTheorieEenView(ContentView):
     uid = 'xchk_ap_db_intro_content_zelftest_theorie_een'
     title = 'zelftest theorie 1'

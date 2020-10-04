@@ -1,0 +1,56 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<h4>Aanmaken van je eerste concrete data</h4>
+<p>Aan alleen structuur heb je niets. We willen ook data bijhouden in ons systeem. Met andere woorden: rijen, niet alleen tabellen.</p>
+<p>Er is een vaste syntax om data in je databank te plaatsen, waar je even aan zal moeten wennen. Het is een goed idee om met een <em>stub</em> te beginnen, een <em>skelet</em> statement. Dit zorgt er voor dat je fouten in de syntax snel opmerkt. Voor een tabel <code>Boeken</code> ziet dit er zo uit, voor een enkel nieuw record:</p>
+
+<pre>
+INSERT INTO Boeken (
+-- hier moet je gebruikte kolomnamen invullen
+)
+VALUES (
+-- hier moet je waarden voor de gebruikte invullen
+);
+</pre>
+
+Probeer het eens uit. Maak eerst een tabel <code>Boeken</code> met een kolom <code>Voornaam</code> van een teksttype, een kolom <code>Titel</code> van een <code>NOT NULL</code> teksttype en doe dan:
+
+<pre>
+INSERT INTO Boeken (
+Voornaam
+)
+VALUES (
+'Aurelius'
+);
+</pre>
+
+Omdat we hebben vereist in een eerder script dat de titel van een boek altijd aanwezig moet zijn, moeten we deze aanduiden als gebruikte kolom:
+
+<pre>
+INSERT INTO Boeken (
+Voornaam,
+Titel)
+VALUES (
+'Aurelius',
+'Filosofie'
+);
+</pre>
+
+Dit zou moeten werken. Merk op: de volgorde van de vernoemde kolommen moet overeenstemmen met de volgorde van de waarden!
+
+<h4>Meer data in een keer</h4>
+
+<p>Je hoeft geen <code>INSERT</code> statement te schrijven per stukje data. Je kan meerdere rijen tegelijk invoegen door ze te scheiden met komma's:
+<pre>
+INSERT INTO Boeken (
+   Voornaam,
+   Titel,
+)
+VALUES
+('Gerard', 'Heideggers vraag naar de techniek'),
+('Diderik', 'Logicaboek')
+</pre>
+{% endblock course_content %}

@@ -4,12 +4,15 @@ from xchk_core.courses import Course
 from .contentviews import *
 
 course = Course('databankenintro','Databanken Intro',[(ZelftestTheorieEenView,[DatatypesTemporeleTypesView,
-                                                                               IfExistsView,
+                                                                               IfNotExistsView,
                                                                                DropStatementView,
                                                                                InsertStatementView,
                                                                                SelectStatementView,
                                                                                MysqlWorkbenchInstallerenView]),
-                                                      (IfExistsView,[DatatypesBooleansView]),
+                                                      (NotNullView,[CreateStatementView]),
+                                                      (InsertStatementView,[NotNullView]),
+                                                      (SelectStatementView,[InsertStatementView]),
+                                                      (IfNotExistsView,[DatatypesBooleansView]),
                                                       (DatatypesTemporeleTypesView,[CreateStatementView]),
                                                       (DatatypesBooleansView,[CreateStatementView]),
                                                       (BasisstructurenVanEenRelationeleDatabaseView,[WatIsEenRelationeleDatabaseView]),

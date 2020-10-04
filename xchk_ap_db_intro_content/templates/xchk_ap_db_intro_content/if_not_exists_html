@@ -1,0 +1,7 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>Via het <code>CREATE</code>-commando maak je een nieuwe structuur aan met een bepaalde naam. Als die naam al bestaat, levert dat een foutmelding. Daarom moeten we voorzichtig omspringen met het <code>CREATE</code> commando. We doen dit door onze <code>CREATE</code> enkel uit te voeren als de naam die we willen gebruiken (voor een database of een tabel of een andere structuur) nog niet gebruikt wordt. Hiervoor vervangen we bijvoorbeeld <code>CREATE TABLE MyTable (Column VARCHAR(100));</code> door <code>CREATE TABLE IF NOT EXISTS MyTable (Column VARCHAR(100));</code>. Dit vermijdt dat we op een foutmelding botsen. Het kan wel een waarschuwing opleveren, maar dat is op zich niet erg.</p>
+{% endblock course_content %}

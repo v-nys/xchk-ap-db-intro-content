@@ -1,0 +1,7 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>Soms kunnen we met ontbrekende waarden leven, soms niet. Indien we bijvoorbeeld kunstwerken uit de oudheid bijhouden in een tabel <code>Kunstwerken</code> met een kolom <code>Artiest</code>, zullen we niet in elke rij een artiest kunnen invullen, want we zullen het niet altijd weten. Langs de andere kant is het soms verplicht een waarde in te vullen. In de database van een bibliotheek zal elk boek een identificatiecode moeten krijgen, bijvoorbeeld. Dit geven we aan door in het <code>CREATE</code>-statement het datatype te laten volgen door <code>NOT NULL</code>. Als we dit schrijven, is het onmogelijk een boek zonder identificatiecode in het systeem te plaatsen.</p>
+{% endblock course_content %}

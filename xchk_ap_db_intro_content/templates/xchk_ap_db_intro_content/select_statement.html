@@ -1,0 +1,49 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>Je kan in MySQL Workbench wel rechtstreeks naar je tabellen kijken, maar om gerichter te zoeken, moet je het commando kennen dat achter de schermen wordt uitgevoerd. Dat is het <code>SELECT</code>-commando.</p>
+
+<h4>basisgebruik</h4>
+De simpelste vorm van het <code>SELECT</code> commando toont gewoon alle data in een bepaalde tabel, bijvoorbeeld:
+
+<pre>
+SELECT * FROM Boeken;
+</pre>
+
+De asterisk is een "wildcard" of "joker". Ze geeft aan dat we <strong>alle</strong> kolommen willen zien. We kunnen ook kijken naar specifieke kolommen:
+
+<pre>
+SELECT Voornaam, Titel FROM Boeken;
+</pre>
+
+Tip: als je de namen van de kolommen niet uit het hoofd kent, typ dan eerst de naam van de tabel, gevolgd door een punt. Dan kan Workbench slim aanvullen:
+
+<pre>
+SELECT Boeken.Voornaam, Boeken.Titel FROM Boeken;
+</pre>
+
+<h4>data ordenen</h4>
+Er zijn veel manieren om geselecteerde data te groeperen, maar de simpelste is <code>ORDER BY</code>. Als je dit toevoegt aan een <code>SELECT</code>-statement, kan je de rijen in een andere volgorde weergeven. Bijvoorbeeld:
+
+<pre>
+SELECT * FROM Boeken ORDER BY Voornaam;
+</pre>
+
+Je kan ook een tweede \(en derde,...\) kolom gebruiken om knopen door te hakken:
+
+<pre>
+SELECT * FROM Boeken ORDER BY Voornaam, Titel;
+</pre>
+
+Je hoeft ook niet te sorteren op naam van de kolom, maar kan ook op het nummer van de kolom sorteren:
+
+<pre>
+-- sorteert eerst op basis van de eerste kolom in de tabel
+-- gebruikt bij gelijke waarden in de eerste kolom de tweede om knopen door te hakken
+SELECT * FROM Boeken ORDER BY 1, 2;
+</pre>
+
+Let op: je moet weten welke sorteermethode gebruikt wordt. Zeker bij strings is dit niet zo evident, want zo zal <code>'5'</code> normaal gesorteerd worden na <code>'0006'</code>, omdat er niet naar de betekenis van een getal gekeken wordt maar wel naar de gebruikte tekens.
+{% endblock course_content %}
