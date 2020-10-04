@@ -135,13 +135,11 @@ class VerbindenMetDeDatabaseServerViaWorkbenchView(ContentView):
     template = 'xchk_ap_db_intro_content/verbinden_met_de_database_server_via_workbench.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
-
 class WatIsMysqlView(ContentView):
     uid = 'xchk_ap_db_intro_content_wat_is_mysql'
     title = 'Wat is MySQL?'
     template = 'xchk_ap_db_intro_content/wat_is_mysql.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
-
 
 class WatIsEenRelationeleDatabaseView(ContentView):
     uid = 'xchk_ap_db_intro_content_wat_is_een_relationele_database'
@@ -180,9 +178,9 @@ class NotNullView(ContentView):
     template = 'xchk_ap_db_intro_content/not_null.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
-# TODO
 class ZelftestTheorieEenView(ContentView):
     uid = 'xchk_ap_db_intro_content_zelftest_theorie_een'
     title = 'zelftest theorie 1'
     template = 'xchk_ap_db_intro_content/zelftest_theorie_een.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
