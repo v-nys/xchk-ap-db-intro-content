@@ -1,0 +1,26 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<h4><code>DATE</code></h4>
+
+<p>Dit type dient voor het bijhouden van datums in de vorm 'YYYY-MM-DD'. Je kan alleen jaartallen van 1000 tot 9999 bijhouden.</p>
+
+<h4><code>TIME</code></h4>
+Dit type dient voor het bijhouden van ofwel een tijdstip ofwel een zekere periode, zoals je die zou kunnen meten met een chronometer. Het formaat is HHH:MM:SS. Meerbepaald kan je tot 838 uur gaan. Je kan ook negatieve tijdstippen voorstellen.
+
+<h4><code>DATETIME</code></h4>
+Een DATETIME is een waarde die een specifiek ogenblik in de tijd voorstelt. Met andere woorden ongeveer een combinatie van DATE en TIME in één datatype. Het formaat is dan ook YYYY-MM-DD HH:MM:SS en het bereik ligt tussen het jaar 1000 en 9999. DATETIME is flexibeler dan het gelijkaardige type TIMESTAMP, omdat een timestamp steeds tussen 1970 en begin 2038 moet zijn.
+<h4><code>YEAR</code></h4>
+Voor wanneer een volledige datum meer is dan je nodig hebt. Je kan wel minder jaartallen bijhouden: van 1901 tot 2155.
+
+<h4>datums schrijven</h4>
+Je schrijft datums alsof het strings waren in een afgesproken formaat, dus ook tussen enkele aanhalingstekens.
+{% endblock course_content %}
+
+{% block assignment %}
+{% autoescape off %}
+  {{ custom_data.rendered_mc_qs }}
+{% endautoescape %}
+{% endblock assignment %}

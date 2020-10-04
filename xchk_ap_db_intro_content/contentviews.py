@@ -68,7 +68,7 @@ class MysqlWorkbenchInstallerenView(ContentView):
     uid = 'xchk_ap_db_intro_content_mysql_workbench_installeren'
     title = 'MySQL Workbench installeren'
     template = 'xchk_ap_db_intro_content/mysql_workbench_installeren.html'
-    strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
 
 
 class WatIsEenDatabankView(ContentView):
@@ -103,13 +103,25 @@ class MysqlDockerImageView(ContentView):
     template = 'xchk_ap_db_intro_content/mysql_docker_image.html'
     strat = Strategy(refusing_check=TrueCheck(),accepting_check=Negation(TrueCheck()))
 
-
 class DatatypesGeheleGetallenView(ContentView):
     uid = 'xchk_ap_db_intro_content_datatypes_gehele_getallen'
     title = 'datatypes: gehele getallen'
     template = 'xchk_ap_db_intro_content/datatypes_gehele_getallen.html'
     strat = xchk_ap_db_intro_content_datatypes_gehele_getallen_strat
     custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
+
+class DatatypesTemporeleTypesView(ContentView):
+    uid = 'xchk_ap_db_intro_content_datatypes_temporele_types'
+    title = 'datatypes: temporeel'
+    template = 'xchk_ap_db_intro_content/datatypes_temporeel.html'
+    strat = xchk_ap_db_intro_content_datatypes_temporeel_strat
+    custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
+
+class DatatypesBooleansView(ContentView):
+    uid = 'xchk_ap_db_intro_content_datatypes_booleans'
+    title = 'datatypes: booleans'
+    template = 'xchk_ap_db_intro_content/datatypes_booleans.html'
+    strat = xchk_ap_db_intro_content_datatypes_booleans_strat
 
 class WatIsDockerView(ContentView):
     uid = 'xchk_ap_db_intro_content_wat_is_docker'
@@ -142,4 +154,31 @@ class DatabaseSelecterenView(ContentView):
     uid = 'xchk_ap_db_intro_content_database_selecteren'
     title = 'database selecteren'
     template = 'xchk_ap_db_intro_content/database_selecteren.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+# TODO
+class IfExistsView(ContentView):
+    uid = 'xchk_ap_db_intro_content_if_exists'
+    title = 'if (not) exists'
+    template = 'xchk_ap_db_intro_content/if_exists.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+# TODO
+class InsertStatementView(ContentView):
+    uid = 'xchk_ap_db_intro_content_insert_statement'
+    title = 'INSERT statement'
+    template = 'xchk_ap_db_intro_content/insert_statement.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+# TODO
+class SelectStatementView(ContentView):
+    uid = 'xchk_ap_db_intro_content_select_statement'
+    title = 'SELECT statement'
+    template = 'xchk_ap_db_intro_content/select_statement.html'
+    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+
+class ZelftestTheorieEenView(ContentView):
+    uid = 'xchk_ap_db_intro_content_zelftest_theorie_een'
+    title = 'zelftest theorie 1'
+    template = 'xchk_ap_db_intro_content/zelftest_theorie_een.html'
     strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())

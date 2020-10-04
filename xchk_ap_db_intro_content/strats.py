@@ -100,8 +100,8 @@ xchk_ap_db_intro_content_create_statement_strat = Strategy(
         accepting_check=TrueCheck())
 
 xchk_ap_db_intro_content_drop_statement_strat = Strategy(
-        refusing_check=TrueCheck(),
-        accepting_check=Negation(TrueCheck()))
+        refusing_check=Negation(TrueCheck()),
+        accepting_check=TrueCheck())
 
 diagramnotatie_data = [('Welke figuur levert informatie die we via de DML in het systeem zullen plaatsen?',
     ('De verzamelingennotatie',True,None),
@@ -174,3 +174,25 @@ xchk_ap_db_intro_content_datatypes_gehele_getallen_strat = Strategy(
                                                   MultipleChoiceFormatCheck(),
                                                   MultipleChoiceAnswerCheck(None,getallen_data)])),
         accepting_check=TrueCheck())
+
+
+temporeel_data = [("Welk datatype zou je gebruiken om 3 januari 1987 voor te stellen?",
+                    ("TIME",False,None),
+                    ("DATE",True,None),
+                    ("DATETIME",False,None)),
+                  ('Welk datatype zou je gebruiken om "15u43" voor te stellen?',
+                    ("TIME",True,None),
+                    ("DATE",False,None),
+                    ("DATETIME",False,None))]
+
+xchk_ap_db_intro_content_datatypes_temporeel_strat = Strategy(
+        refusing_check=Negation(ConjunctiveCheck([FileExistsCheck(),
+                                                  MultipleChoiceFormatCheck(),
+                                                  MultipleChoiceAnswerCheck(None,temporeel_data)])),
+        accepting_check=TrueCheck())
+
+xchk_ap_db_intro_content_datatypes_booleans_strat = Strategy(
+        refusing_check=Negation(TrueCheck()),
+        accepting_check=TrueCheck())
+
+
