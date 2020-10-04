@@ -182,5 +182,5 @@ class ZelftestTheorieEenView(ContentView):
     uid = 'xchk_ap_db_intro_content_zelftest_theorie_een'
     title = 'zelftest theorie 1'
     template = 'xchk_ap_db_intro_content/zelftest_theorie_een.html'
-    strat = Strategy(refusing_check=Negation(TrueCheck()),accepting_check=TrueCheck())
+    strat = xchk_ap_db_intro_content_self_test_theory_strat
     custom_data = {'rendered_mc_qs': strat.refusing_check.negated_predicate.conjuncts[2].render()}
