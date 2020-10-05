@@ -5,13 +5,22 @@
 <h3>Schriftelijk materiaal</h3>
 <h4><code>DATE</code></h4>
 
-<p>Dit type dient voor het bijhouden van datums in de vorm 'YYYY-MM-DD'. Je kan alleen jaartallen van 1000 tot 9999 bijhouden.</p>
+<p>Dit type dient voor het bijhouden van datums in de vorm 'YYYY-MM-DD'. Met andere woorden, datums zonder tijdstip van de dag. Je kan alleen jaartallen van 1000 tot 9999 bijhouden.</p>
+<p>Om data van dit type (en van de andere temporele types) in te voegen, noteer je het temporele type zoals een string, maar volg je het gegeven formaat. Herbij worden volgende afkortingen gebruikt:</p>
+<ul>
+	<li><code>Y</code>: cijfer van een jaar</li>
+	<li><code>M</code>: cijfer van een maand</li>
+	<li><code>M</code>: cijfer van een dag</li>
+	<li><code>H</code>: cijfer van een uur</li>
+	<li><code>m</code>: cijfer van een minuut</li>
+	<li><code>S</code>: cijfer van een seconde</li>
+</ul>
 
 <h4><code>TIME</code></h4>
 Dit type dient voor het bijhouden van ofwel een tijdstip ofwel een zekere periode, zoals je die zou kunnen meten met een chronometer. Het formaat is HHH:MM:SS. Meerbepaald kan je tot 838 uur gaan. Je kan ook negatieve tijdstippen voorstellen.
 
 <h4><code>DATETIME</code></h4>
-Een DATETIME is een waarde die een specifiek ogenblik in de tijd voorstelt. Met andere woorden ongeveer een combinatie van DATE en TIME in één datatype. Het formaat is dan ook YYYY-MM-DD HH:MM:SS en het bereik ligt tussen het jaar 1000 en 9999. DATETIME is flexibeler dan het gelijkaardige type TIMESTAMP, omdat een timestamp steeds tussen 1970 en begin 2038 moet zijn.
+Een DATETIME is een waarde die een specifiek ogenblik in de tijd voorstelt. Met andere woorden ongeveer een combinatie van DATE en TIME in één datatype. Het formaat is dan ook YYYY-MM-DD HH:mm:SS en het bereik ligt tussen het jaar 1000 en 9999. DATETIME is flexibeler dan het gelijkaardige type TIMESTAMP, omdat een timestamp steeds tussen 1970 en begin 2038 moet zijn.
 <h4><code>YEAR</code></h4>
 Voor wanneer een volledige datum meer is dan je nodig hebt. Je kan wel minder jaartallen bijhouden: van 1901 tot 2155.
 
