@@ -4,6 +4,7 @@ from xchk_core.courses import Course
 from .contentviews import *
 
 course = Course('databankenintro','Databanken Intro',[(ZelftestTheorieEenView,[DatatypesTemporeleTypesView,
+                                                                               DatatypesBooleansView,
                                                                                IfNotExistsView,
                                                                                DropStatementView,
                                                                                SelectStatementView,
